@@ -1,0 +1,29 @@
+.feed-card{
+    padding-bottom: 10px;
+    .feed-img{
+        float: left;
+        img{
+            max-width: 100px;
+        }
+    }
+    .feed-direita{
+        float: right;
+        max-width: calc(90% - 100px);
+    }
+    .feed-desc{
+        margin-left: 10px;
+        padding-left: 20px;
+    }
+    .feed-vote{
+        margin-left: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+#add-button{
+    background-color: #aa3333!important; 
+    color: white!important;
+}

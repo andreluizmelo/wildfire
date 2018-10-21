@@ -1,0 +1,38 @@
+<ion-menu [content]="content" color="plugado">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-card>
+      <ion-card-content class="secao-perfil-menu">
+        <ion-card-title>
+          <ion-icon menuClose name="contact" (click)="navegarParaMeuPerfil()" class="foto-perfil"></ion-icon>
+        </ion-card-title>
+        <p>
+          <button ion-button menuClose (click)="navegarParaMeuPerfil()" class="botao-meuperfil">My profile</button>
+        </p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content class="">
+        <ion-list>
+          <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="menu-button">
+            <ng-container *ngIf="p.icon">
+              <ion-icon [name]="p.icon" class="menu-icon"></ion-icon>
+            </ng-container>
+            {{p.title}}
+          </button>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
+</ion-menu>
+
+<!-- <div style="display: none;" *ngIf="openNotifications"></div> -->
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

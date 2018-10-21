@@ -1,0 +1,156 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// body{
+//     background-color: black;
+//     color: white;
+// }
+.secao-perfil-menu{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .botao-meuperfil{
+        background-color: #aa3333;
+    }
+    .botao-meuperfil:hover,.botao-meuperfil:focus{
+        background-color: #992222;
+    }
+}
+
+.menu-button{
+    font-size: 1.3em;
+}
+
+.foto-perfil{
+    font-size: 3em;
+}
+
+.vermelho{
+    color: red;
+}
+.azul{
+    background: blue !important;
+}
+
+button{
+    ion-icon{
+        margin-right: 4px;
+    }
+}
+
+.janelinha{
+    width: 50vw;
+    text-align: center;
+}
+
+.gm-style-iw{
+    text-align: center;
+    div{
+        margin:auto;
+    }
+}
+
+// novo estilo
+#map-canvas {
+	margin: 0;
+	padding: 0;
+	height: 400px;
+    max-width: none;
+    img {
+        max-width: none !important;
+    }
+}
+.gm-style-iw {
+	// top: 15px !important;
+	// left: 0px !important;
+	background-color: #fff;
+	// box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+ 	// border: 1px solid rgba(240, 62, 62, 0.6);//#f53d3d
+    // border-radius: 2px 2px 10px 10px;
+    
+}
+.iw-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px;
+    background-color: #f53d3d;
+    color: white;
+    margin: 0;
+    // border-radius: 2px 2px 0 0;
+}
+#iw-container {
+    margin-bottom: 10px;
+
+    .iw-content {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        margin-right: 1px;
+        padding: 15px 5px 20px 15px;
+        max-height: 140px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}
+.iw-content img {
+	float: right;
+	margin: 0 5px 5px 10px;
+}
+.iw-subTitle {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 0;
+}
+// .iw-bottom-gradient {
+// 	position: absolute;
+// 	width: 326px;
+// 	height: 25px;
+// 	bottom: 10px;
+// 	right: 18px;
+// 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// }
+
+
+// ion-content, ion-header{
+//     background-color: #222!important;
+// }
+
+// ion-card, ion-card ion-list, ion-card ion-list button{
+//     background-color: #333!important;
+//     color: #aaaaaa!important;
+// }
+// body{
+//     color: #aaaaaa;
+// }
+// .foto-perfil{
+//     color: #aaaaaa;
+// }
+
+// ion-icon{
+//     color: #521d67!important;
+// }
+
+
+.menu-icon{
+    color: #aa3333!important;
+}

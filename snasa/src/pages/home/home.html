@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-title>Se L<span class="vermelho">!</span>ga</ion-title> -->
+    <ion-title><img style="max-width:30%; max-height: 70px" src="./assets/imgs/logo.png"></ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div #map id="map"></div>
+  <ion-fab bottom right>
+    <button ion-fab id="add-button" (click)="navegarParaAdicionarReport()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

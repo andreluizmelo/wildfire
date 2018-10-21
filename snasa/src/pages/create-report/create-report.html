@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Report incident</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div padding>
+    <ion-list radio-group [(ngModel)]="type">
+        <ion-list-header class="label-tipo-ocorrencia">
+          Incident type:
+        </ion-list-header>
+
+        <ion-item *ngFor="let item of reportTypes">
+          <ion-label>{{item.label}}</ion-label>
+          <ion-radio checked="{{item.checked}}" value="{{item.value}}"></ion-radio>
+        </ion-item>
+      </ion-list>
+  </div>
+
+  <div padding style="margin-top: -50px;">
+    <ion-item>
+      <ion-label floating class="label-descricao-ocorrencia">Incident description</ion-label>
+      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+  </div>
+
+  <div padding class="center">
+    <div style="width: 150px; height: auto;">
+        <img [src]="base64Image" *ngIf="base64Image" />
+    </div>
+  </div>
+
+  <div style="text-align: center; padding-top: 10px;">
+      <button class="red-button" ion-button (click)="createReport()"><ion-icon name="checkmark"></ion-icon>Send it</button>
+  </div>
+
+
+
+</ion-content>
+
+
+

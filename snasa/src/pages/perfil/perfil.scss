@@ -1,0 +1,65 @@
+.card-perfil{
+    // .card-title{
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     width: 150px;
+    //     align-content: center;
+    // }
+    .perfil-classificacao{
+        float: left;
+        max-width: 40%;
+    }
+    .texto-info-basicas{
+        max-width: 58%;
+        float: right;
+        align-content: right;
+        .nome{
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        .email, .telefone{
+            font-size: 1.2em;
+        }
+    }
+    
+    .foto-perfil{
+        // margin-left: auto;
+        // margin-right: auto;
+        font-size: 9em;
+        // align-self: center;
+        // width: 150px;
+    }
+    .container-classificacao{
+        align-content: center;
+        align-self: center;
+        .classificacao{
+            font-size: 1.35em;
+            margin-left: 4px;
+            margin-right: 4px;
+            &:first-child{
+                margin-left: auto;
+            }
+            &:last-child{
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.recompensas{
+    .pontos{
+        color: darkblue;
+        font-size: 5em;
+    }
+    .enviados{
+        font-size: 2em;
+    }
+    .validados{
+        font-size: 2em;
+        color: green;
+    }
+}
+
+.red-icon{
+    color: #aa3333;
+}

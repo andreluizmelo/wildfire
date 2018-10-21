@@ -1,0 +1,39 @@
+.label-descricao-ocorrencia{
+    font-size: 1em;
+    color: #aa3333!important;
+}
+
+.label-tipo-ocorrencia{
+    font-size: 1em;
+    color: #aa3333!important;
+}
+
+.center {
+    margin: 0 auto;
+    width: 200px;
+    padding: 20px;
+}
+
+ion-label{
+    color: #333;
+}
+
+.item-radio.item-radio-checked .label{
+    color: #bb4444!important;   
+}
+
+.radio-icon.radio-checked{
+    border-color: #bb4444!important;
+    
+    .radio-inner{
+        background-color: #bb4444!important;
+    }
+}
+
+.red-button{
+    background-color: #aa3333;
+    
+}
+.red-button:hover,.red-button:focus{
+    background-color: #992222!important;
+}

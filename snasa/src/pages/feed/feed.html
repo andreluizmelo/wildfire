@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Feed</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ng-container *ngIf="naoHaReports">
+        <h2>No incident reported until now :(</h2>
+    </ng-container>
+    <ion-card *ngFor="let item of reportsDaVizinhanca" class="feed-card">
+        <ion-card-content class="">
+            <ion-card-title>
+              {{item.type}}
+            </ion-card-title>
+            <div class="feed-img">
+                <img [src]="item.url" />
+            </div>
+            <div class="feed-direita">
+                <div class="feed-desc">
+                {{item.description}}
+                </div>
+                <div class="feed-vote">
+                    <ng-container *ngIf="outline(item, true)">
+                        <button ion-button outline color="secondary" (click)="changeLike(item,true)"><ion-icon [name]="iconName(item,true)"></ion-icon></button>
+                    </ng-container>
+                    <ng-container *ngIf="!outline(item, true)">
+                        <button ion-button color="secondary" (click)="changeLike(item,true)"><ion-icon [name]="iconName(item,true)"></ion-icon></button>
+                    </ng-container>
+
+                    <ng-container *ngIf="outline(item, false)">
+                        <button ion-button outline color="danger" (click)="changeLike(item,false)"><ion-icon [name]="iconName(item,false)"></ion-icon></button>
+                    </ng-container>
+                    <ng-container *ngIf="!outline(item, false)">
+                        <button ion-button color="danger" (click)="changeLike(item,false)"><ion-icon [name]="iconName(item,false)"></ion-icon></button>
+                    </ng-container>
+                </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-fab bottom right>
+        <button ion-fab id="add-button" (click)="navegarParaAdicionarReport()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>
+</ion-content>
