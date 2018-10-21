@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context=".MapsActivity" >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="64dp"
+        android:maxHeight="64dp"
+        android:scaleType="fitCenter"
+        android:textAlignment="center"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:id="@+id/flameButton"
+        android:src="@drawable/fire"
+    />
+
+    <!--ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="64dp"
+        android:maxHeight="64dp"
+        android:scaleType="fitCenter"
+        android:textAlignment="center"
+        android:layout_marginLeft="250dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:id="@+id/smokeButton"
+        android:src="@drawable/fire"
+        /-->
+</FrameLayout>
+
+
