@@ -20,10 +20,9 @@ export class CreateReportPage implements OnInit {
   public type: string = '';
   public writingFirebase: boolean = false;
   public reportTypes: ReportTypeItem[] = [
-    {value: "risk", label: "Risk of Fire", checked: false},
-    {value: "fire", label: "Fire", checked: false},
-    {value: "smoke", label: "Smoke", checked: false},
-    {value: "others", label: "Others", checked: false}
+    {value: "risco", label: "Risk of Fire", image: "./assets/imgs/rubish.png", checked: false},
+    {value: "incendio", label: "Fire", image: "./assets/imgs/fire.png", checked: false},
+    {value: "Outros", label: "Others", image: "./assets/imgs/smoke.png", checked: false}
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,

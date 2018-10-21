@@ -1,4 +1,4 @@
-<ion-header>
+  <ion-header>
   <ion-navbar>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -10,22 +10,33 @@
 <ion-content padding>
 
   <div padding>
-    <ion-list radio-group [(ngModel)]="type">
-        <ion-list-header class="label-tipo-ocorrencia">
-          Incident type:
-        </ion-list-header>
+    <ion-list radio-group [(ngModel)]="type" class="list-h">
+        <!-- <ion-list-header class="label-tipo-ocorrencia">
+          Incident Type
+        </ion-list-header> -->
 
         <ion-item *ngFor="let item of reportTypes">
-          <ion-label>{{item.label}}</ion-label>
+          <ion-label>
+              {{item.label}}
+              <br>
+            <img class="fire-type" src="{{item.image}}"/>
+          </ion-label>
           <ion-radio checked="{{item.checked}}" value="{{item.value}}"></ion-radio>
         </ion-item>
       </ion-list>
   </div>
 
-  <div padding style="margin-top: -50px;">
+  <!-- <div padding style="margin-top: -50px;">
     <ion-item>
       <ion-label floating class="label-descricao-ocorrencia">Incident description</ion-label>
       <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+  </div> -->
+
+  <div padding style="margin-top: -50px;">
+    <ion-item>
+      <ion-label>Incident description</ion-label>
+      <ion-input></ion-input>
     </ion-item>
   </div>
 
@@ -35,13 +46,17 @@
     </div>
   </div>
 
-  <div style="text-align: center; padding-top: 10px;">
+  <div style=" text-align: center">
+      <!-- <button class="red-button" ion-button (click)="takePicture(1)"><ion-icon name="camera"></ion-icon>Image</button>
+      <button class="red-button" ion-button (click)="takePicture(0)"><ion-icon name="images"></ion-icon>Gallery</button> -->
       <button class="red-button" ion-button (click)="createReport()"><ion-icon name="checkmark"></ion-icon>Send it</button>
   </div>
 
-
+  <!-- <div *ngIf="positionFound">
+    <p>{{latitude}}</p>
+    <p>{{longitude}}</p>
+  </div> -->
 
 </ion-content>
-
 
 

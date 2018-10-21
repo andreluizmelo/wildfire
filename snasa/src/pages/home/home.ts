@@ -166,18 +166,18 @@ export class HomePage {
 
 
   addMarker(report: any) {
-    // let iconDir = "";
-    // if (report.severity == "Altissima") {
-    //   iconDir = './assets/imgs/death_2.png'
-    // }
-    // else {
-    //   iconDir = './assets/imgs/exclamation_2.png';
-    // }
+    let iconDir = "";
+    if (report.severity == "Altissima") {
+      iconDir = './assets/imgs/death_2.png'
+    }
+    else {
+      iconDir = './assets/imgs/exclamation_2.png';
+    }
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
       position: new google.maps.LatLng(report.location.coordinates[0], report.location.coordinates[1]),
-      //icon: { url: iconDir },
+      icon: { url: iconDir },
     });
 
 
@@ -196,6 +196,7 @@ if (report.thumb != undefined && report.thumb != null) {
 
     let infoWindow = new google.maps.InfoWindow({
       content: infoWindowContent,
+
     });
     this.markers.push(marker);
 

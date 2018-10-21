@@ -8,40 +8,49 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-card-content class="card-perfil">
-            <ion-card-title>
-                Basic information
-            </ion-card-title>
-            <div class="perfil-classificacao">
-                <ion-icon menuClose name="contact" class="foto-perfil"></ion-icon>
-                <div class="container-classificacao">
-                    <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
-                    <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
-                    <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
-                    <ion-icon name="star-half" class="classificacao" class="red-icon"></ion-icon>
-                    <ion-icon name="star-outline" class="classificacao" class="red-icon"></ion-icon>
-                </div>
-            </div>
-            <div class="texto-info-basicas">
-                <div class="nome">André Luiz Melo</div>
-                <div class="email">andre.melo@radixeng.com.br</div>
-                <div class="telefone">(21) 5555555</div>
-            </div>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content class="recompensas">
-            <ion-card-title>
-                My rewards
-            </ion-card-title>
-            <div>
-                <span class="pontos">327</span> points (revisar)
-            </div>
-            <div class="ultimo-mes">
-                <div><span class="enviados">12</span> incidents reported in the last month</div>
-                <div><span class="validados">8</span> incidents confirmed in the last month</div>
-            </div>
-        </ion-card-content>
-    </ion-card>
+    <div class="wrap-profile">
+        <div class="profile">
+            <ion-card>
+                <ion-card-content class="card-perfil">
+                    <ion-card-title>
+                        Basic information
+                    </ion-card-title>
+                    <div class="perfil-classificacao">
+                        <!-- <ion-icon menuClose name="contact" class="foto-perfil"></ion-icon> -->
+                        <div class="container-classificacao">
+                            <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
+                            <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
+                            <ion-icon name="star" class="classificacao" class="red-icon"></ion-icon>
+                            <ion-icon name="star-half" class="classificacao" class="red-icon"></ion-icon>
+                            <ion-icon name="star-outline" class="classificacao" class="red-icon"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="texto-info-basicas">
+                        <div class="nome">André Luiz Melo</div>
+                        <div class="email">andre.melo@radixeng.com.br</div>
+                        <div class="telefone">(21) 5555555</div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-card-content class="recompensas">
+                    <!-- <ion-card-title>
+                        My rewards
+                    </ion-card-title> -->
+                    <div>
+                        <span class="pontos">327</span> Points
+                    </div>
+                    <div class="ultimo-mes">
+                        <div><span class="enviados">12</span> incidents reported in the last month</div>
+                        <div><span class="validados">8</span> incidents confirmed in the last month</div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </div>
+        <div class="bg-profile">
+            
+        </div>
+
+    </div>
+
 </ion-content>

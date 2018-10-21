@@ -21,9 +21,13 @@ export class ReportService extends BaseService {
     public addReport(report: Report){
         let id = this.afs.createId();
         report.id = id;
-        report.location = new firebase.firestore.GeoPoint((report.latitude as number), (report.longitude as number));
+        var lat = parseFloat(report.latitude.toString());
+        var long = parseFloat(report.longitude.toString());
+        report.location = new firebase.firestore.GeoPoint(lat, long);
         report.timestamp = (new Date(Date.now())).toISOString();
-        this.reportsCollection.add(JSON.parse(JSON.stringify(report)));
+        let baseurl = "http://snasa.herokuapp.com";
+        this.http.post("https://snasa.herokuapp.com/incident",JSON.parse(JSON.stringify(report)))
+        //this.reportsCollection.add(JSON.parse(JSON.stringify(report)));
     }
 
     public getReports(successAction: (data) => void){

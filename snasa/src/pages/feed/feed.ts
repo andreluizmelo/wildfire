@@ -2,17 +2,12 @@ import { Component, NgModule } from '@angular/core';
 import { NavController, LoadingController, Loading } from 'ionic-angular';
 import { ReportService } from '../../services/report-service/report-service.service';
 import { CreateReportPage } from '../create-report/create-report';
-import { EscapeHtmlPipe } from '../../app/keepHtml.pipe';
-
 
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html'
 })
 @NgModule({
-    declarations: [
-        EscapeHtmlPipe
-    ],
   providers: [ReportService]
 })
 export class FeedPage {
@@ -78,8 +73,6 @@ export class FeedPage {
             else
                 item.mylike = -1;
         }
-
-        console.log(item);
     }
 
     public navegarParaAdicionarReport(event): void {
