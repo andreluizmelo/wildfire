@@ -173,10 +173,11 @@ export class HomePage {
     else {
       iconDir = './assets/imgs/exclamation_2.png';
     }
+    console.log(report);
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
-      position: new google.maps.LatLng(report.location.coordinates[0], report.location.coordinates[1]),
+      position: new google.maps.LatLng(report.location.coordinates[1], report.location.coordinates[0]),
       icon: { url: iconDir },
     });
 

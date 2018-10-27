@@ -84,7 +84,7 @@ button{
 	// box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
  	// border: 1px solid rgba(240, 62, 62, 0.6);//#f53d3d
     // border-radius: 2px 2px 10px 10px;
-    
+
 }
 .iw-title {
     font-family: 'Open Sans Condensed', sans-serif;
@@ -184,13 +184,13 @@ ion-header{
 .list{
     button{
         color: #fff;
-        background-color: transparent;     
+        background-color: transparent;
         ion-label {
             color: #fff;
             .menu-icon{
                 color: #ff0000 !important;
             }
-        }   
+        }
     }
 }
 .scroll-content{
@@ -238,4 +238,8 @@ ion-header{
             text-align: left;
         }
     }
+}
+
+@media screen and (max-width: 992px) {
+    .list-h{flex-direction: column;}
 }

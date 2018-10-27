@@ -32,7 +32,7 @@ app.get('/incident/image', (req, res) =>{
     let collectionName = req.query.collection;
     if(collectionName == null || collectionName == '')
         collectionName = 'incidents';
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send('error');
@@ -76,7 +76,7 @@ app.get('/incident', (req,res) =>{
     let collectionName = req.query.collection;
     if(collectionName == null || collectionName == '')
         collectionName = 'incidents';
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send('error');
@@ -106,7 +106,7 @@ app.get('/image', (req,res) =>{
     let collectionName = req.query.collection;
     if(collectionName == null || collectionName == '')
         collectionName = 'incidents';
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send('error');
@@ -141,7 +141,7 @@ app.get("/incidents", (req,res)=>{
         collectionName = 'incidents';
     console.log("lat:  " + latitude);
     console.log("long: " + longitude);
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send("error")
@@ -175,7 +175,7 @@ app.get("/incidents", (req,res)=>{
 });
 
 function getDadosTempo(lat,long){
-    return fetch('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&APPID={apikey}')
+    return fetch('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&APPID=110480bdb477a78ca4279f6c1cc1e97d')
         .then(res => res.json())
         .then(res => {
             return {
@@ -199,7 +199,7 @@ app.post("/incident", (req,res)=>{
 
     condicoes.then( cond => {
         incident.weather = cond;
-        MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com/", function(err, client) {
+        MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com/", function(err, client) {
             if(err) {
                 return err;
             }
@@ -219,7 +219,7 @@ app.get("/incident/upvote", (req, res) =>{
     let collectionName = req.query.collection;
     if(collectionName == null || collectionName == '')
         collectionName = 'incidents';
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send('error');
@@ -252,7 +252,7 @@ app.get("/incident/downvote", (req, res) =>{
     let collectionName = req.query.collection;
     if(collectionName == null || collectionName == '')
         collectionName = 'incidents';
-    MongoClient.connect("mongodb://user:password@mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
+    MongoClient.connect("mongodb://mongordxnasa.southcentralus.cloudapp.azure.com", function(err, client) {
         if(err) {
             console.log(err);
             res.send('error');
